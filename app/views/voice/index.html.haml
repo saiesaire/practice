@@ -1,0 +1,10 @@
+- @voices.each do |voice|
+  .voice
+    = link_to voice.name,voice
+    - @animations.each do |animation|
+      - if voice.id == animation.voice_id
+        = animation.title
+        - break
+    = link_to '編集', edit_voice_path(voice), class: "btn"
+    = link_to '削除', voice, method: :delete
+= link_to '新規登録' , new_voice_path, class: "btn"

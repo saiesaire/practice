@@ -1,0 +1,10 @@
+編集画面
+
+= form_with model: @voice, local: true do |f|
+  = f.text_area :name, placeholder: "名前"
+  = f.text_area :anime, placeholder: "出演アニメ"
+  = f.text_area :game, placeholder: "出演ゲーム"
+  = f.text_area :other, placeholder: "その他"
+  = f.submit "更新", class: "btn"
+
+= link_to '一覧画面に戻る', voice_index_path, class: "btn"

@@ -1,0 +1,18 @@
+詳細
+
+.content
+  = @voice.name
+.content
+  = @voice.anime
+.content
+  = @voice.game
+.content
+  = @voice.other
+.content
+  - @animations.each do |animation|
+    = animation.title
+
+= link_to '編集', edit_voice_path(@voice), class: "btn"
+= link_to '削除', @voice, method: :delete
+
+= link_to '一覧画面に戻る', voice_index_path, class: "btn"
